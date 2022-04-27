@@ -11,6 +11,8 @@
 
 扫描下方二维码体验效果：
 
-![微信图片_20220427214628](C:%5CUsers%5CChsy%5CMusic%5CDesktop%5C%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20220427214628.jpg)
+
+
+![小程序二维码](C:%5CUsers%5CChsy%5CMusic%5CDesktop%5C%E5%B0%8F%E7%A8%8B%E5%BA%8F%E4%BA%8C%E7%BB%B4%E7%A0%81.jpg)
 
 有什么问题欢迎发送邮件咨询：546754293@qq.com
