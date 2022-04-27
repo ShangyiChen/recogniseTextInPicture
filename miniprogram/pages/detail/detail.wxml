@@ -1,0 +1,29 @@
+<scroll-view scrollY class="ScrollContent {{$SystemInfo.isiPhoneX?'iPhoneX':''}}">
+    <view class="box">
+        <image class="image" mode="widthFix" src="{{image}}"></image>
+    </view>
+    <view style="width: 750rpx; height: 550rpx"></view>
+</scroll-view>
+<view class="filter-flex">
+    <view bindtap="clickMenuSwitch" class="{{showEditArea?'hide':'hide-up'}}">预览</view>
+    <view class="filter-content {{showEditArea==0?'cur':''}}">
+        <scroll-view scrollY="true" style="height:100%" wx:if="{{isText}}">
+            <view bindtap="showModal" style="font-size:26rpx;padding:20rpx 20rpx;width:100%">
+                <text class="text">{{text}}</text>
+            </view>
+        </scroll-view>
+        <view scrollY="false" style="height:100%" wx:if="{{isFile}}">
+            <view bindtap="showModal" style="font-size:26rpx;padding:20rpx 20rpx;width:100%">
+                <image class="excelIcon" mode="aspectFill" src="../images/icon/xls.png" bindtap = "openFile"></image>
+                <text class="filename">{{text}}</text>
+            </view>
+        </view>
+    </view>
+    <view class="xiaomi_edit_bar {{isIphoneX?'iphoneX':''}}">
+        <view class="edit_bar_content">
+            <text bindtap="goBack" class="chooseall">文字识别</text>
+            <text bindtap="copyAll" class="copy" wx:if="{{isText}}">复制</text>
+            <text bindtap="copyLink" class="copy" wx:if="{{isFile}}">复制文件下载链接</text>
+        </view>
+    </view>
+</view>

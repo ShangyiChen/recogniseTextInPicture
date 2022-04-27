@@ -1,0 +1,58 @@
+<!--pages/selectMore/select.wxml-->
+<view class="container">
+    <view class="img-box">
+        <view bindtap="addImg" class="item-add add">
+            <image src="/images/center/icon_addpic.png"></image>
+            <text>点此添加图片</text>
+            <text>(最多支持{{maxCnt}}张)</text>
+        </view>
+        <view class="item border" data-idx="{{index}}" wx:for="{{imgs}}">
+            <view class="clip">
+                <!-- <view catchtap="clipImage" class="tips" data-idx="{{index}}"></view> -->
+                <view class="bg"></view>
+            </view>
+            <image class="img" mode="aspectFill" src="{{imgs[index].filePath}}"></image>
+            <image catchtap="delete" class="delete" data-idx="{{index}}" src="/images/center/delete.png"></image>
+            <view class="mask" wx:if="{{state!==0}}">
+                <view bindtap="toStart" data-idx="{{index}}" wx:if="{{imgs[index].state===-1}}">
+                    <text style="color:#F69521">识别失败
+{{imgs[index].msg}}</text>
+                </view>
+                <block wx:if="{{imgs[index].state===1}}">
+                    <image class="annotation" src="../../images/center/loading_white.gif"></image>
+                    <text>识别中,请稍候</text>
+                </block>
+                <block wx:if="{{imgs[index].state===2}}">
+                    <image class="annotation" src="/images/center/tick_white.png"></image>
+                    <text>识别完成</text>
+                </block>
+            </view>
+        </view>
+    </view>
+    <view class="footer">
+        <view bindtap="goHome" class="home-page">首页</view>
+        <view class="next disable" wx:if="{{imgCount===0}}">开始识别</view>
+        <view bindtap="bindsubmit" class="next" wx:elif="{{state===0}}">开始识别（{{imgCount}}张）</view>
+        <view class="next disable" wx:elif="{{state===1}}">正在识别({{scanIdx}}/{{imgCount}}张)</view>
+        <view bindtap="finish" class="next disable" wx:elif="{{state===2}}">开始识别</view>
+    </view>
+</view>
+
+<action-sheet bindchange="listenerActionSheet" hidden="{{actionSheetHidden}}">
+    <action-sheet-item>
+        <form  bindsubmit="imgBtnTap" data-source="album">
+            <button formType="submit" style="background:none;border:none;width:100%;height:50rpx;line-height:50rpx;" type="default">从相册中选择</button>
+        </form>
+    </action-sheet-item>
+    <action-sheet-item>
+        <form bindsubmit="imgBtnTap" data-source="camera">
+            <button formType="submit" style="background:none;border:none;width:100%;height:50rpx;line-height:50rpx;" type="default">拍照</button>
+        </form>
+    </action-sheet-item>
+    <action-sheet-item>
+        <form bindsubmit="imgBtnTap" data-source="weixin">
+            <button formType="submit" style="background:none;border:none;width:100%;height:50rpx;line-height:50rpx;" type="default">导入微信聊天图片</button>
+        </form>
+    </action-sheet-item>
+    <action-sheet-cancel style="color:#000;">取消</action-sheet-cancel>
+</action-sheet>

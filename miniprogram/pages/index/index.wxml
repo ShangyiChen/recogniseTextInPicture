@@ -1,0 +1,57 @@
+<add-tips name="添加到我的小程序，以后使用更方便" delay="{{2}}" duration="{{10}}"/>
+<view class="wrap">
+    <view class="title">传图秒识别，轻松不打字</view>
+    <view class="ocr">
+        <view bindtap="selectType" class="choose-image" data-type="1">
+            <view style="width:220rpx;height:100%;text-align:center;item-align:center;justify-content: center">
+                <view style="margin-top:40rpx;">识别</view>
+                <view>印刷字</view>
+            </view>
+            <view style="padding-left:0rpx;">
+                <image mode="aspectFill" src="../../images/home/tongyong.png" style="width:424rpx;height:100%;"></image>
+            </view>
+        </view>
+        <view bindtap="selectType" class="choose-image margin30" data-type="2">
+            <view style="width:220rpx;height:100%;text-align:center;item-align:center;justify-content: center">
+                <view style="margin-top:40rpx;">识别</view>
+                <view>手写字</view>
+            </view>
+            <view style="padding-left:0rpx;">
+                <image mode="aspectFill" src="../../images/home/shouxie.png" style="width:424rpx;height:100%;"></image>
+            </view>
+        </view>
+        <view class="margin30"></view>
+        <view bindtap="selectType" class="choose-image margin30" data-type="3">
+            <view style="width:220rpx;height:100%;text-align:center;item-align:center;justify-content: center">
+                <view style="margin-top:40rpx;">识别</view>
+                <view>表格图片</view>
+            </view>
+            <view style="padding-left:0rpx;">
+                <image mode="aspectFill" src="../../images/home/table.png" style="width:424rpx;height:100%;"></image>
+            </view>
+        </view>
+    </view>
+    <view style="margin:0 auto;padding-top:20rpx;display:flex;width:650rpx;">
+        <button open-type="share" class="share" hoverClass="none" type="default" style="width:300rpx;background: none;color: rgba(134, 137, 218, 1);font-size: 26rpx;line-height:70rpx;">电脑版本</button>
+      
+        <button bindtap="toRecord" class = "share" hoverClass="none" type="default" style="width:300rpx;background: none;color: rgba(134, 137, 218, 1);font-size: 26rpx;line-height:70rpx;">识别记录</button>
+    </view>
+</view>
+<action-sheet bindchange="listenerActionSheet" hidden="{{actionSheetHidden}}">
+    <action-sheet-item>
+        <form  bindsubmit="imgBtnTap">
+            <button formType="submit" style="background:none;border:none;width:100%;height:50rpx;line-height:50rpx;" type="default">从相册中选择</button>
+        </form>
+    </action-sheet-item>
+    <action-sheet-item>
+        <form bindsubmit="imgBtnTapCamera">
+            <button formType="submit" style="background:none;border:none;width:100%;height:50rpx;line-height:50rpx;" type="default">拍照</button>
+        </form>
+    </action-sheet-item>
+    <action-sheet-item>
+        <form bindsubmit="imgBtnTap" data-source="weixin">
+            <button formType="submit" style="background:none;border:none;width:100%;height:50rpx;line-height:50rpx;" type="default">导入微信聊天图片</button>
+        </form>
+    </action-sheet-item>
+    <action-sheet-cancel style="color:#000;">取消</action-sheet-cancel>
+</action-sheet>

@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "cloud-tip-modal": "/components/cloudTipModal/index",
+    "add-tips": "/components/add-tips/index"
+  }
+}

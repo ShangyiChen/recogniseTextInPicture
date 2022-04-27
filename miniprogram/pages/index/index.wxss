@@ -1,0 +1,210 @@
+page {
+  background-color: #333562;
+}
+
+.wrap {
+  margin: 0;
+  background-color: #333562;
+  color: #fff;
+  font-size: 28rpx;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  font-family: Arial;
+  overflow: hidden;
+}
+
+.ocr {
+  width: 100%;
+  margin-top: 0;
+}
+
+.ocr .ocr_btn {
+  margin: 0 auto;
+  width: 450rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  background-color: rgba(255,255,255,1);
+  color: rgba(100,101,159,1);
+  text-align: center;
+  box-shadow: 0px 0px 0px 0px rgba(170,170,170,1);
+  font-family: Arial;
+  border: 2rpx solid rgba(100,101,159,1);
+  margin-top: 70rpx;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-size: 36rpx;
+  border-radius: 100rpx;
+}
+
+.ocr_btn image {
+  width: 55rpx;
+  height: 55rpx;
+  margin: 0 15rpx 0 0;
+  display: block;
+}
+
+.wrap .second-img {
+  height: 50px;
+  width: 95%;
+  margin-bottom: 5rpx;
+}
+
+.wrap .sl-col {
+  width: 84px;
+  margin: 0 2rpx;
+  border: none;
+  text-align: center;
+  padding: 3rpx;
+  font-size: 12px;
+}
+
+button {
+  display: block;
+  padding: 0;
+  margin: 0;
+  background: transparent;
+  border: 0;
+  outline: 0;
+  border-radius: 0;
+}
+
+button::after {
+  border: 0;
+}
+
+.swiper-container {
+  height: 270rpx;
+}
+
+.tang {
+  position: fixed;
+  top: 35%;
+  z-index: 9999;
+  width: 580rpx;
+  height: 420rpx;
+  overflow: hidden;
+  left: 85rpx;
+  background: #fff;
+}
+
+.inner {
+  width: 100%;
+  height: 300rpx;
+  z-index: 99;
+  padding-top: 0;
+  margin-top: 0rpx;
+}
+
+.biaoge {
+  position: fixed;
+  top: 30%;
+  z-index: 9999;
+  width: 600rpx;
+  left: 80rpx;
+  background: #fff;
+  text-align: center;
+}
+
+.zhezhao {
+  background: #000;
+  left: 0;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  opacity: 0.20;
+  position: fixed;
+  z-index: 100;
+}
+
+.rangle {
+  border-bottom: 15rpx #f69521 solid;
+  border-left: 15rpx #333562 solid;
+  border-right: 15rpx #333562 solid;
+  width: 0rpx;
+  height: 0px;
+  background: #fff;
+  position: absolute;
+  top: -13rpx;
+  right: 108rpx;
+}
+
+.deleteClose {
+  width: 50rpx;
+  height: 50rpx;
+  float: right;
+  padding-top: 10rpx;
+  padding-right: 15rpx;
+}
+
+.line {
+  float: left;
+  height: 25rpx;
+  width: 1rpx;
+  margin-top: 18.5rpx;
+  border-left: 1rpx rgba(247,106,115,1) solid;
+  vertical-align: middle;
+}
+
+.exaple-image {
+  width: 100%;
+  height: 100%;
+}
+
+.title {
+  text-align: center;
+  color: rgba(255,255,255,1);
+  font-size: 36rpx;
+  font-family: PingFangSC-regular;
+  margin: 55rpx 0 60rpx 0;
+}
+
+.click-btn {
+  background: rgba(140,137,218,0.5);
+}
+.share {
+  border: none;
+    background: none;
+    font-size: 26rpx;
+   
+    background: none;
+}
+.s-border {
+  width: 10rpx;
+  background: none;
+  color: rgba(134,137,218,1);
+  border: none;
+  background: none;
+}
+
+.arrow {
+  width: 18rpx;
+  height: 18rpx;
+  border-top: 2px solid #8689da;
+  border-right: 2px solid #8689da;
+  transform: rotate(45deg);
+  margin-bottom: 5rpx;
+}
+
+.Gallery {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #8689da;
+  margin-top: 40rpx;
+  font-size: 32rpx;
+}
+
+.choose-image {
+  width: 644rpx;
+  height: 168rpx;
+  margin: 0 auto;
+  color: #fff;
+  display: flex;
+  background-color: rgba(79,82,139,1);
+}
+
+.margin30 {
+  margin-top: 8vh;
+}
